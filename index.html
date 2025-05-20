@@ -72,6 +72,58 @@
         <p class="pluspetit">Bienvenue sur ma page! <br>Découvrez qui je suis et ce que je fais dans la vie ...</p>
     </div>
 </section><!-- End Hero -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flèche animée</title>
+    <style>
+        #animatedArrow {
+            position: fixed;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 36px;
+            color: #555;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenu de votre page ici -->
+    <div style="height: 1500px;">
+        <!-- Exemple de contenu long pour permettre le défilement -->
+        <p>Faites défiler vers le bas...</p>
+    </div>
+
+    <div id="animatedArrow" onclick="scrollToBottom()">↓</div>
+
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
 
 <main id="main">
 
